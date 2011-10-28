@@ -1,0 +1,6 @@
+rhodes_path='C:/RhoStudio/ruby/lib/ruby/gems/1.8/gems/rhodes-3.1.1'
+app_name='USCampus'
+reload_app_changes=0
+debug_port=
+debug_host='127.0.0.1'
+platform='android'

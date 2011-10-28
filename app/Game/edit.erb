@@ -1,0 +1,32 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @game.Sport %></h1>
+    <a href="<%= url_for :action => :show, :id => @game.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">Cancel</a>
+    <a href="<%= url_for :action => :delete, :id => @game.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">Delete</a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @game.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="game[Sport]" class="fieldLabel">Sport</label>
+            <input type="text" id="game[Sport]" name="game[Sport]" value="<%= @game.Sport %>" <%= placeholder( "Sport" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="game[Date]" class="fieldLabel">Date</label>
+            <input type="text" id="game[Date]" name="game[Date]" value="<%= @game.Date %>" <%= placeholder( "Date" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="game[Venue]" class="fieldLabel">Venue</label>
+            <input type="text" id="game[Venue]" name="game[Venue]" value="<%= @game.Venue %>" <%= placeholder( "Venue" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

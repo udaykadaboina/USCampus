@@ -1,0 +1,33 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @game.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">Cancel</a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @game.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="game[Sport]" class="fieldLabel">Sport</label>
+            <input type="text" id="game[Sport]" name="game[Sport]" <%= placeholder("Sport") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="game[Date]" class="fieldLabel">Date</label>
+            <input type="text" id="game[Date]" name="game[Date]" <%= placeholder("Date") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="game[Venue]" class="fieldLabel">Venue</label>
+            <input type="text" id="game[Venue]" name="game[Venue]" <%= placeholder("Venue") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

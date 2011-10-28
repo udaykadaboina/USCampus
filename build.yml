@@ -1,0 +1,26 @@
+sdk: C:/RhoStudio/ruby/lib/ruby/gems/1.8/gems/rhodes-3.1.1
+sdkversion: 3.1.0
+name: USCampus
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+wmsdk: Windows Mobile 6 Professional SDK (ARMV4I)
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator4.3
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: com.rhomobile.uscampus
+  BundleURLScheme: uscampus
+wp:
+  productid: 55017f70-dea3-012e-4eba-0026c7448ae1
+symbian:
+  uid: 3956142209
+extensions:
+  - json
+  - another-extension
+android:
+  emulator: AndroidRhodes
